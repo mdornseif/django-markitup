@@ -6,15 +6,15 @@ class MarkItUpEditor(forms.Textarea):
     class Media:
         css = {
             "all": (
-                '/media/markitup-1.1.5/markitup/skins/simple/style.css',
-                '/media/markitup-1.1.5/markitup/sets/textile/style.css'
+                'http://s.hdimg.net/markitup-1.1.5/markitup/skins/simple/style.css',
+                'http://s.hdimg.net/markitup-1.1.5/markitup/sets/textile/style.css'
             )
         }
         
         js = (
-            '/media/markitup-1.1.5/jquery.pack.js',
-            '/media/markitup-1.1.5/markitup/jquery.markitup.pack.js',
-            '/media/markitup-1.1.5/markitup/sets/textile/set.js'
+            'http://s.hdimg.net/markitup-1.1.5/jquery.pack.js',
+            'http://s.hdimg.net/markitup-1.1.5/markitup/jquery.markitup.pack.js',
+            'http://s.hdimg.net/markitup-1.1.5/markitup/sets/textile/set.js'
         )
 
     def __init__(self, language=None, attrs=None):
