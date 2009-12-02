@@ -6,20 +6,20 @@ class MarkItUpEditor(forms.Textarea):
     class Media:
         css = {
             "all": (
-                'http://s.hdimg.net/markitup-1.1.5/markitup/skins/simple/style.css',
-                'http://s.hdimg.net/markitup-1.1.5/markitup/sets/textile/style.css'
+                '/media/markitup-1.1.5/markitup/skins/simple/style.css',
+                '/media/markitup-1.1.5/markitup/sets/textile/style.css'
             )
         }
         
         js = (
-            'http://s.hdimg.net/markitup-1.1.5/jquery.pack.js',
-            'http://s.hdimg.net/markitup-1.1.5/markitup/jquery.markitup.pack.js',
-            'http://s.hdimg.net/markitup-1.1.5/markitup/sets/textile/set.js'
+            '/media/markitup-1.1.5/jquery.pack.js',
+            '/media/markitup-1.1.5/markitup/jquery.markitup.pack.js',
+            '/media/markitup-1.1.5/markitup/sets/textile/set.js',
+            '/media/markitup-1.1.5/markitup/jquery.markitup.js'
         )
 
     def __init__(self, language=None, attrs=None):
         self.language = language or settings.LANGUAGE_CODE[:2]
-        self.attrs = {'class': 'wymeditor'}
         if attrs:
             self.attrs.update(attrs)
         super(MarkItUpEditor, self).__init__(attrs)

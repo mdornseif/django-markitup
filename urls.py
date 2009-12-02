@@ -2,6 +2,7 @@ import os
 
 from django.conf.urls.defaults import *
 from django.conf import settings
+from demo.views import textile2html
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -15,6 +16,8 @@ urlpatterns = patterns('',
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
+    (r'^textile2html.py$', textile2html),
+    
     # Uncomment the next line to enable the admin:
     (r'^admin/(.*)', admin.site.root),
 )
