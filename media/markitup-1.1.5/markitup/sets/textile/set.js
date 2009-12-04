@@ -10,6 +10,16 @@
 // -------------------------------------------------------------------
 // Feel free to add more tags
 // -------------------------------------------------------------------
+
+function showHelp()
+{
+    var popupwindow = window.open ("http://redcloth.org/hobix.com/textile/quick.html", "popupwindow", "location=1,status=1,scrollbars=1");
+    
+    window.setTimeout(function() {
+        popupwindow.focus();
+    }, 100);
+}
+
 mySettings = {
 	previewParserPath:	'/textile2html.py', // path to your Textile parser
 	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},
@@ -35,6 +45,8 @@ mySettings = {
 		{name:'Quotes', openWith:'bq(!(([![Class]!]))!). '},
 		{name:'Code', openWith:'@', closeWith:'@'},
 		{separator:'---------------' },
-		{name:'Preview', call:'preview', className:'preview'}
+		{name:'Preview', call:'preview', className:'preview'},
+        {separator:'---------------' },
+		{name:'Help', call:'showHelp', className:'help'}
 	]
 }
