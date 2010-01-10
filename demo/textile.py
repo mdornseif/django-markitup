@@ -254,7 +254,7 @@ class Textile(object):
     # urlch = r'[\w"$\-_.+!*\'(),";/?:@=&%#{}|\\^~\[\]`]'
     urlch = '[\w"$\-_.+*\'(),";\/?:@=&%#{}|\\^~\[\]`]'
 
-    url_schemes = ('http','https','ftp','mailto')
+    url_schemes = ('http', 'https', 'ftp', 'mailto')
 
     btag = ('bq', 'bc', 'notextile', 'pre', 'h[1-6]', 'fn\d+', 'p')
     noimage = False
@@ -567,7 +567,7 @@ class Textile(object):
                 if ext:
                     out.append(out.pop() + c1)
 
-                tag,atts,ext,cite,graf = match.groups()
+                tag, atts, ext, cite, graf = match.groups()
                 o1, o2, content, c2, c1 = self.fBlock(tag, atts, ext, cite, graf)
                 # leave off c1 if this block is extended, we'll close it at the start of the next block
                 if ext:
@@ -787,7 +787,7 @@ class Textile(object):
 
     def relURL(self, url):
         o = urlparse(url)
-        (scheme,netloc,path,params,query,fragment) = o[0:6]
+        (scheme, netloc, path, params, query, fragment) = o[0:6]
         if (not scheme or scheme == 'http') and not netloc and re.search(r'^\w', path):
             url = self.hu + url
         if self.restricted and scheme and scheme not in self.url_schemes:
@@ -808,8 +808,8 @@ class Textile(object):
         """
         while True:
             old = text
-            for k,v in self.shelf.items():
-                text = text.replace(k,v)
+            for k, v in self.shelf.items():
+                text = text.replace(k, v)
             if text == old: break
         return text
 
@@ -826,8 +826,8 @@ class Textile(object):
                 ('"', '&#34;')
             )
 
-        for k,v in a:
-            text = text.replace(k,v)
+        for k, v in a:
+            text = text.replace(k, v)
         return text
 
     def graf(self, text):
