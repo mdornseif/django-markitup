@@ -17,6 +17,6 @@ setup(name='django-markitup',
                    'Intended Audience :: Developers',
                    'Programming Language :: Python'],
       zip_safe=False,
-      packages = find_packages('markitup'),
+      packages = find_packages(),
       install_requires=['Django'],
 )
