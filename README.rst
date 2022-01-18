@@ -1,4 +1,5 @@
-This is unmaintained
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 Use http://pypi.python.org/pypi/django-markitup/ instead!
 
 # django-markItUp!
